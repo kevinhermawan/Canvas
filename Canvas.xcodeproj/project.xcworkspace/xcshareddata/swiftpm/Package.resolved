@@ -1,0 +1,95 @@
+{
+  "pins" : [
+    {
+      "identity" : "appinfo",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kevinhermawan/AppInfo",
+      "state" : {
+        "revision" : "4b60b10c94c327083cb5fe5e73cdff21d1082b4c",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "chatfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kevinhermawan/ChatField.git",
+      "state" : {
+        "revision" : "36833e4ddc23308c3754083d4bdcfa837fa17799",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults.git",
+      "state" : {
+        "revision" : "3efef5a28ebdbbe922d4a2049493733ed14475a6",
+        "version" : "7.3.1"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke.git",
+      "state" : {
+        "revision" : "1694798e876113d44f6ec6ead965d7286695981d",
+        "version" : "12.2.0"
+      }
+    },
+    {
+      "identity" : "openai",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MacPaw/OpenAI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "497266a278de1f32a609981e0012faabcf2091b4"
+      }
+    },
+    {
+      "identity" : "sparkle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparkle-project/Sparkle.git",
+      "state" : {
+        "revision" : "47d3d90aee3c52b6f61d04ceae426e607df62347",
+        "version" : "2.5.2"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/swiftui-introspect.git",
+      "state" : {
+        "revision" : "9e1cc02a65b22e09a8251261cccbccce02731fc5",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "viewcondition",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kevinhermawan/ViewCondition.git",
+      "state" : {
+        "revision" : "a3d0aaf943271247dfd4870a2a0696693165c884",
+        "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "viewstate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kevinhermawan/ViewState.git",
+      "state" : {
+        "revision" : "8e5a5efbbf3fb5a2d2621533a115a9da031214cb",
+        "version" : "1.2.1"
+      }
+    }
+  ],
+  "version" : 2
+}

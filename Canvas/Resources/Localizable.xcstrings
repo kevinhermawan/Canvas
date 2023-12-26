@@ -1,0 +1,147 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Canvas Help" : {
+
+    },
+    "Check for Updates..." : {
+
+    },
+    "FOOTNOTE_API_KEY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The API key is securely stored in the keychain."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_API_KEY_SETUP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please setup the API key."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_IMAGE_IMAGE_EDIT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_IMAGE_IMAGE_VARIATION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The image to use as the basis for the variation(s). Must be a valid PNG file, less than 4MB, and square."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_MASK_IMAGE_EDIT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as image."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_MODEL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The model to use for image generation."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_NUMBER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The number of images to generate."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_QUALITY_HD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The quality of the image that will be generated. HD creates images with finer details and greater consistency across the image. "
+          }
+        }
+      }
+    },
+    "FOOTNOTE_QUALITY_STANDARD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The quality of the image that will be generated."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_SIZE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The size of the generated images."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_STYLE_NATURAL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The style of the generated images. Natural causes the model to produce more natural, less hyper-real looking images."
+          }
+        }
+      }
+    },
+    "FOOTNOTE_STYLE_VIVID" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The style of the generated images. Vivid causes the model to lean towards generating hyper-real and dramatic images."
+          }
+        }
+      }
+    },
+    "Preferences" : {
+
+    }
+  },
+  "version" : "1.0"
+}
