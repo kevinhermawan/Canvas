@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Canvas</title>
+        <item>
+            <title>1.0.0</title>
+            <pubDate>Tue, 26 Dec 2023 17:53:27 +0700</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.0/Canvas-1.0.0.zip" length="3110804" type="application/octet-stream" sparkle:edSignature="KLQKXOn3VmQsq9ko/x2hqSuCOXT0fxHumD0JQzgUn+vmLnpnZIY+EdNpd1GIl2ANcMr7K3lvk8wig9tI3q/rDw=="/>
+        </item>
+    </channel>
+</rss>
