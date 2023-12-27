@@ -1,0 +1,60 @@
+{
+  "pricing": [
+    {
+      "model": "dall-e-3",
+      "quality": "standard",
+      "resolution": "1024x1024",
+      "price": 0.04
+    },
+    {
+      "model": "dall-e-3",
+      "quality": "standard",
+      "resolution": "1024x1792",
+      "price": 0.08
+    },
+    {
+      "model": "dall-e-3",
+      "quality": "standard",
+      "resolution": "1792x1024",
+      "price": 0.08
+    },
+    {
+      "model": "dall-e-3",
+      "quality": "hd",
+      "resolution": "1024x1024",
+      "price": 0.08
+    },
+    {
+      "model": "dall-e-3",
+      "quality": "hd",
+      "resolution": "1024x1792",
+      "price": 0.12
+    },
+    {
+      "model": "dall-e-3",
+      "quality": "hd",
+      "resolution": "1792x1024",
+      "price": 0.12
+    },
+    {
+      "model": "dall-e-2",
+      "quality": null,
+      "resolution": "256x256",
+      "price": 0.016
+    },
+    {
+      "model": "dall-e-2",
+      "quality": null,
+      "resolution": "512x512",
+      "price": 0.018
+    },
+    {
+      "model": "dall-e-2",
+      "quality": null,
+      "resolution": "1024x1024",
+      "price": 0.02
+    }
+  ],
+  "pricing_info_url": "https://openai.com/pricing",
+  "pricing_updated_at": "25/12/2023"
+}
