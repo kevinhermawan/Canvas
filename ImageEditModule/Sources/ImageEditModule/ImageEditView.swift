@@ -54,6 +54,9 @@ public struct ImageEditView: View {
             .padding(.bottom, 8)
             .padding(.horizontal)
         }
+        .onDisappear {
+            dalleViewModel.cancel()
+        }
     }
     
     @MainActor

@@ -69,6 +69,9 @@ public struct ImageVariationView: View {
             }
             .padding()
         }
+        .onDisappear {
+            dalleViewModel.cancel()
+        }
     }
     
     @MainActor
