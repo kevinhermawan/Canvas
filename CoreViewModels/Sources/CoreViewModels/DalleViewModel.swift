@@ -75,6 +75,7 @@ public final class DalleViewModel {
     public func cancel() {
         self.cancellable?.cancel()
         self.viewState = nil
+        self.results = []
     }
     
     private func handleCompletion(completion: Subscribers.Completion<Error>) {
