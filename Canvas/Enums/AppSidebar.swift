@@ -10,6 +10,7 @@ import Foundation
 enum AppSidebar: String, CaseIterable {
     case dalle
     case dalle2
+    case menu
     
     var title: String {
         switch self {
@@ -17,6 +18,8 @@ enum AppSidebar: String, CaseIterable {
             return "DALL·E"
         case .dalle2:
             return "DALL·E 2"
+        case .menu:
+            return "Menu"
         }
     }
 }
@@ -34,6 +37,8 @@ extension AppSidebar {
             return [.imageGeneration]
         case .dalle2:
             return [.imageEdit, .imageVariation]
+        case .menu:
+            return [.modelPricing]
         }
     }
 }

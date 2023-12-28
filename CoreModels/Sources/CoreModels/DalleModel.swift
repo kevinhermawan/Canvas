@@ -46,10 +46,10 @@ extension DalleModel: Identifiable {
     }
 }
 
-extension DalleModel: Defaults.Serializable {}
+extension DalleModel: Codable, Defaults.Serializable {}
 
 extension DalleModel {
-    public enum Quality: String, CaseIterable, Identifiable, Defaults.Serializable {
+    public enum Quality: String, CaseIterable, Identifiable, Codable, Defaults.Serializable {
         case standard
         case hd
         
