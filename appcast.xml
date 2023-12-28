@@ -3,12 +3,20 @@
     <channel>
         <title>Canvas</title>
         <item>
-            <title>1.0.0</title>
-            <pubDate>Tue, 26 Dec 2023 18:14:12 +0700</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <title>1.0.1</title>
+            <pubDate>Thu, 28 Dec 2023 07:43:51 +0700</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.0/Canvas-1.0.0.dmg" length="4944732" type="application/octet-stream" sparkle:edSignature="CNGTsmPvk8ylLWY+yNQ+SO4285SCPHY48eY3o5/eXuMlCrkK7hmz/WX39J319imYkhX3xyd3JoQHkHlg+TmWCw=="/>
+            <description>
+            <![CDATA[
+                <ul>
+                    <li>fix: cancel all operations when the view disappears by @kevinhermawan</li>
+                    <li>feat: adds model pricing info by @kevinhermawan</li>
+                </ul>
+            ]]>
+            </description>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.1/Canvas-1.0.1.dmg" length="5011159" type="application/octet-stream" sparkle:edSignature="yLQgQvUYKPB5iaVbdJf72cGpFUpO3DoKcuoyrs1jJZwS3JyeQk2exFNm7i9p0Eop1xevX5tMYedl4fY5JCGfAQ=="/>
         </item>
     </channel>
 </rss>
