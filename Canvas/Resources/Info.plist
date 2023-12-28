@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MODEL_INFO_URL</key>
+	<string>https://raw.githubusercontent.com/kevinhermawan/Canvas/main/model-info.json</string>
 	<key>HELP_URL</key>
 	<string>https://github.com/kevinhermawan/Canvas/issues</string>
 	<key>SUEnableInstallerLauncherService</key>

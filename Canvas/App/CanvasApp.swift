@@ -17,10 +17,12 @@ struct CanvasApp: App {
     
     @State private var apiKeyViewModel: APIKeyViewModel
     @State private var dalleViewModel: DalleViewModel
+    @State private var dalleModelInfoViewModel: DalleModelInfoViewModel
     
     init() {
         self._apiKeyViewModel = State(initialValue: APIKeyViewModel())
         self._dalleViewModel = State(initialValue: DalleViewModel())
+        self._dalleModelInfoViewModel = State(initialValue: DalleModelInfoViewModel())
         
         let updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
         updater = updaterController.updater
@@ -34,6 +36,7 @@ struct CanvasApp: App {
             AppView()
                 .environment(apiKeyViewModel)
                 .environment(dalleViewModel)
+                .environment(dalleModelInfoViewModel)
         }
         .commands {
             CommandGroup(after: .appInfo) {

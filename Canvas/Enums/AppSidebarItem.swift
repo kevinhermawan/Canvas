@@ -11,6 +11,7 @@ enum AppSidebarItem: String, CaseIterable {
     case imageGeneration
     case imageEdit
     case imageVariation
+    case modelPricing
     
     var title: String {
         switch self {
@@ -20,6 +21,8 @@ enum AppSidebarItem: String, CaseIterable {
             return "Image Edit"
         case .imageVariation:
             return "Image Variation"
+        case .modelPricing:
+            return "Model Pricing"
         }
     }
     
@@ -31,6 +34,8 @@ enum AppSidebarItem: String, CaseIterable {
             return "theatermask.and.paintbrush"
         case .imageVariation:
             return "paintpalette"
+        case .modelPricing:
+            return "dollarsign.circle"
         }
     }
 }

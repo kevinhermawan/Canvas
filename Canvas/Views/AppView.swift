@@ -11,6 +11,7 @@ import ImageEditModule
 import ImageGenerationModule
 import ImagePreferencesModule
 import ImageVariationModule
+import ModelPricingModule
 import SwiftUI
 
 struct AppView: View {
@@ -103,6 +104,8 @@ struct AppView: View {
                     .modelPickerHidden()
                     .imagePickerVisible(text: "FOOTNOTE_IMAGE_IMAGE_VARIATION")
                 }
+            case .modelPricing:
+                ModelPricingView()
             }
         }
     }

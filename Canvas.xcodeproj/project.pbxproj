@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A20744D2B3CD3E5008516D1 /* ModelPricingModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0A20744C2B3CD3E5008516D1 /* ModelPricingModule */; };
 		0A809A402B39752200C9A015 /* CanvasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A809A3F2B39752200C9A015 /* CanvasApp.swift */; };
 		0A809A462B39752300C9A015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A809A452B39752300C9A015 /* Assets.xcassets */; };
 		0A809A492B39752300C9A015 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A809A482B39752300C9A015 /* Preview Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A20744B2B3CD385008516D1 /* ModelPricingModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ModelPricingModule; sourceTree = "<group>"; };
 		0A809A3C2B39752200C9A015 /* Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A809A3F2B39752200C9A015 /* CanvasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasApp.swift; sourceTree = "<group>"; };
 		0A809A452B39752300C9A015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A809A842B39EB0100C9A015 /* AppInfo in Frameworks */,
+				0A20744D2B3CD3E5008516D1 /* ModelPricingModule in Frameworks */,
 				0A809A632B397C3B00C9A015 /* ImageEditModule in Frameworks */,
 				0A809A612B397C3B00C9A015 /* CoreViews in Frameworks */,
 				0A809A652B397C3B00C9A015 /* ImageGenerationModule in Frameworks */,
@@ -79,6 +82,7 @@
 		0A809A332B39752200C9A015 = {
 			isa = PBXGroup;
 			children = (
+				0A20744B2B3CD385008516D1 /* ModelPricingModule */,
 				0A809A7D2B39D65000C9A015 /* CoreExtensions */,
 				0A809A762B398F1600C9A015 /* CoreModels */,
 				0A809A592B397B2E00C9A015 /* CoreViewModels */,
@@ -203,6 +207,7 @@
 				0A809A802B39DDBA00C9A015 /* CoreModels */,
 				0A809A832B39EB0100C9A015 /* AppInfo */,
 				0AE400632B3AD5F800307732 /* Sparkle */,
+				0A20744C2B3CD3E5008516D1 /* ModelPricingModule */,
 			);
 			productName = Canvas;
 			productReference = 0A809A3C2B39752200C9A015 /* Canvas.app */;
@@ -508,6 +513,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A20744C2B3CD3E5008516D1 /* ModelPricingModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ModelPricingModule;
+		};
 		0A809A5A2B397B6100C9A015 /* CoreViewModels */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreViewModels;
