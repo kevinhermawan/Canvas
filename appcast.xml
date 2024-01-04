@@ -3,20 +3,20 @@
     <channel>
         <title>Canvas</title>
         <item>
-            <title>1.0.1</title>
-            <pubDate>Thu, 28 Dec 2023 07:43:51 +0700</pubDate>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <title>1.0.2</title>
+            <pubDate>Thu, 04 Jan 2024 22:21:36 +0700</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description>
             <![CDATA[
                 <ul>
-                    <li>fix: cancel all operations when the view disappears by @kevinhermawan</li>
-                    <li>feat: adds model pricing info by @kevinhermawan</li>
+                    <li>feat: adds orientation label to size picker by @kevinhermawan</li>
+                    <li>fix: API Key can't be removed by @kevinhermawan</li>
                 </ul>
             ]]>
             </description>
-            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.1/Canvas-1.0.1.dmg" length="5011159" type="application/octet-stream" sparkle:edSignature="yLQgQvUYKPB5iaVbdJf72cGpFUpO3DoKcuoyrs1jJZwS3JyeQk2exFNm7i9p0Eop1xevX5tMYedl4fY5JCGfAQ=="/>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.2/Canvas-1.0.2.dmg" length="3330510" type="application/octet-stream" sparkle:edSignature="VWjp6MHpYx3RpYpCEya+4xKgczFg9o4Me68+J5v8Puh4bj3Sbufinvz1YYKpOBQVx0WZh5d9DsZaOh0YqeyLCQ=="/>
         </item>
     </channel>
 </rss>
