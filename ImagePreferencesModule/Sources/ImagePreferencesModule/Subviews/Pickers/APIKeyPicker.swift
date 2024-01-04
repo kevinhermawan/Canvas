@@ -7,6 +7,7 @@
 
 import CoreViews
 import SwiftUI
+import ViewCondition
 
 struct APIKeyPicker: View {
     @Binding private var apiKey: String?
@@ -49,7 +50,9 @@ struct APIKeyPicker: View {
             }
         } header: {
             SectionHeader("API Key")
-                .action("Remove", action: {})
+                .if(apiKey.isNotNil) { view in
+                    view.action("Remove", action: removeAction)
+                }
         } footer: {
             if apiKey.isNil {
                 FootnoteText("FOOTNOTE_API_KEY_SETUP")
