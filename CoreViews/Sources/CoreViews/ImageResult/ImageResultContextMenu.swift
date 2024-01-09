@@ -5,6 +5,7 @@
 //  Created by Kevin Hermawan on 26/12/23.
 //
 
+import CoreExtensions
 import Nuke
 import NukeUI
 import SwiftUI
@@ -44,11 +45,8 @@ struct ImageResultContextMenu: View {
         
         savePanel.begin { response in
             guard response == .OK, let url = savePanel.url else { return }
-            guard let tiffData = nsImage.tiffRepresentation else { return }
-            guard let bitmapImage = NSBitmapImageRep(data: tiffData) else { return }
-            guard let pngData = bitmapImage.representation(using: .png, properties: [:]) else { return }
-            
-            try? pngData.write(to: url)
+
+            try? nsImage.write(to: url)
         }
     }
 }

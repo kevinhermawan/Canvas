@@ -7,6 +7,7 @@
 
 import AppInfo
 import CoreViewModels
+import SettingsModule
 import Sparkle
 import SwiftUI
 
@@ -14,12 +15,16 @@ import SwiftUI
 struct CanvasApp: App {
     @State private var appUpdater: AppUpdater
     private var updater: SPUUpdater
+
+    @State private var settingsManager: SettingsManager
     
     @State private var apiKeyViewModel: APIKeyViewModel
     @State private var dalleViewModel: DalleViewModel
     @State private var dalleModelInfoViewModel: DalleModelInfoViewModel
-    
+
     init() {
+        self._settingsManager = State(initialValue: SettingsManager())
+        
         self._apiKeyViewModel = State(initialValue: APIKeyViewModel())
         self._dalleViewModel = State(initialValue: DalleViewModel())
         self._dalleModelInfoViewModel = State(initialValue: DalleModelInfoViewModel())
@@ -34,6 +39,7 @@ struct CanvasApp: App {
     var body: some Scene {
         WindowGroup {
             AppView()
+                .environment(settingsManager)
                 .environment(apiKeyViewModel)
                 .environment(dalleViewModel)
                 .environment(dalleModelInfoViewModel)
@@ -51,6 +57,11 @@ struct CanvasApp: App {
                     Link("Canvas Help", destination: url)
                 }
             }
+        }
+        
+        Settings {
+            SettingsView()
+                .environment(settingsManager)
         }
     }
 }

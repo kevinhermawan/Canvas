@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A03693D2B4D6FBB00D7DAD4 /* SettingsModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0A03693C2B4D6FBB00D7DAD4 /* SettingsModule */; };
 		0A20744D2B3CD3E5008516D1 /* ModelPricingModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0A20744C2B3CD3E5008516D1 /* ModelPricingModule */; };
 		0A809A402B39752200C9A015 /* CanvasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A809A3F2B39752200C9A015 /* CanvasApp.swift */; };
 		0A809A462B39752300C9A015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A809A452B39752300C9A015 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A03693B2B4D6F7600D7DAD4 /* SettingsModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SettingsModule; sourceTree = "<group>"; };
 		0A20744B2B3CD385008516D1 /* ModelPricingModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ModelPricingModule; sourceTree = "<group>"; };
 		0A809A3C2B39752200C9A015 /* Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A809A3F2B39752200C9A015 /* CanvasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasApp.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0A809A632B397C3B00C9A015 /* ImageEditModule in Frameworks */,
 				0A809A612B397C3B00C9A015 /* CoreViews in Frameworks */,
 				0A809A652B397C3B00C9A015 /* ImageGenerationModule in Frameworks */,
+				0A03693D2B4D6FBB00D7DAD4 /* SettingsModule in Frameworks */,
 				0A809A5B2B397B6100C9A015 /* CoreViewModels in Frameworks */,
 				0A809A672B397C3B00C9A015 /* ImageVariationModule in Frameworks */,
 				0A809A752B398AEE00C9A015 /* ImagePreferencesModule in Frameworks */,
@@ -82,7 +85,6 @@
 		0A809A332B39752200C9A015 = {
 			isa = PBXGroup;
 			children = (
-				0A20744B2B3CD385008516D1 /* ModelPricingModule */,
 				0A809A7D2B39D65000C9A015 /* CoreExtensions */,
 				0A809A762B398F1600C9A015 /* CoreModels */,
 				0A809A592B397B2E00C9A015 /* CoreViewModels */,
@@ -91,6 +93,8 @@
 				0A809A5C2B397B8800C9A015 /* ImageGenerationModule */,
 				0A809A732B398AB200C9A015 /* ImagePreferencesModule */,
 				0A809A5E2B397BE800C9A015 /* ImageVariationModule */,
+				0A20744B2B3CD385008516D1 /* ModelPricingModule */,
+				0A03693B2B4D6F7600D7DAD4 /* SettingsModule */,
 				0A809A3E2B39752200C9A015 /* Canvas */,
 				0A809A522B39772800C9A015 /* Frameworks */,
 				0A809A3D2B39752200C9A015 /* Products */,
@@ -208,6 +212,7 @@
 				0A809A832B39EB0100C9A015 /* AppInfo */,
 				0AE400632B3AD5F800307732 /* Sparkle */,
 				0A20744C2B3CD3E5008516D1 /* ModelPricingModule */,
+				0A03693C2B4D6FBB00D7DAD4 /* SettingsModule */,
 			);
 			productName = Canvas;
 			productReference = 0A809A3C2B39752200C9A015 /* Canvas.app */;
@@ -221,7 +226,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					0A809A3B2B39752200C9A015 = {
 						CreatedOnToolsVersion = 15.1;
@@ -316,6 +321,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -380,6 +386,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -411,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Canvas/Preview Content\"";
 				DEVELOPMENT_TEAM = 84ZM7K56B5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -441,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Canvas/Preview Content\"";
 				DEVELOPMENT_TEAM = 84ZM7K56B5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -513,6 +522,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A03693C2B4D6FBB00D7DAD4 /* SettingsModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsModule;
+		};
 		0A20744C2B3CD3E5008516D1 /* ModelPricingModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ModelPricingModule;
