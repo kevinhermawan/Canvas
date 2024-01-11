@@ -37,40 +37,43 @@ public struct ImageVariationView: View {
     }
     
     public var body: some View {
-        VStack {
-            ImageResultListView(dalleViewModel.results) { url in
-                ImageResultListItemView(url: url).tag(url)
+        NavigationStack {
+            VStack {
+                ImageResultListView(dalleViewModel.results) { url in
+                    ImageResultListItemView(url: url).tag(url)
+                }
+                
+                HStack {
+                    if let errorMessage = dalleViewModel.viewState?.errorMessage {
+                        Text(LocalizedStringKey(errorMessage))
+                            .foregroundStyle(.red)
+                            .font(.callout)
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: { generationAction() }) {
+                        Label("Generate Variation", systemImage: "arrow.up.circle.fill")
+                            .padding(.vertical, 8)
+                            .padding(.horizontal)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .hide(if: generating, removeCompletely: true)
+                    
+                    Button(action: { dalleViewModel.cancel() }) {
+                        Label("Cancel Generation", systemImage: "stop.fill")
+                            .padding(.vertical, 8)
+                            .padding(.horizontal)
+                    }
+                    .buttonStyle(.bordered)
+                    .visible(if: generating, removeCompletely: true)
+                }
+                .padding()
             }
-            
-            HStack {
-                if let errorMessage = dalleViewModel.viewState?.errorMessage {
-                    Text(LocalizedStringKey(errorMessage))
-                        .foregroundStyle(.red)
-                        .font(.callout)
-                }
-                
-                Spacer()
-                
-                Button(action: { generationAction() }) {
-                    Label("Generate Variation", systemImage: "arrow.up.circle.fill")
-                        .padding(.vertical, 8)
-                        .padding(.horizontal)
-                }
-                .buttonStyle(.borderedProminent)
-                .hide(if: generating, removeCompletely: true)
-                
-                Button(action: { dalleViewModel.cancel() }) {
-                    Label("Cancel Generation", systemImage: "stop.fill")
-                        .padding(.vertical, 8)
-                        .padding(.horizontal)
-                }
-                .buttonStyle(.bordered)
-                .visible(if: generating, removeCompletely: true)
+            .navigationTitle("Image Variation")
+            .onDisappear {
+                dalleViewModel.cancel()
             }
-            .padding()
-        }
-        .onDisappear {
-            dalleViewModel.cancel()
         }
     }
     

@@ -41,21 +41,24 @@ public struct ImageEditView: View {
     }
     
     public var body: some View {
-        VStack {
-            ImageResultListView(dalleViewModel.results) { url in
-                ImageResultListItemView(url: url).tag(url)
+        NavigationStack {
+            VStack {
+                ImageResultListView(dalleViewModel.results) { url in
+                    ImageResultListItemView(url: url).tag(url)
+                }
+                
+                PromptField(prompt: $prompt, viewState: dalleViewModel.viewState) {
+                    generationAction()
+                } cancellationAction: {
+                    dalleViewModel.cancel()
+                }
+                .padding(.bottom, 8)
+                .padding(.horizontal)
             }
-            
-            PromptField(prompt: $prompt, viewState: dalleViewModel.viewState) {
-                generationAction()
-            } cancellationAction: {
+            .navigationTitle("Image Edit")
+            .onDisappear {
                 dalleViewModel.cancel()
             }
-            .padding(.bottom, 8)
-            .padding(.horizontal)
-        }
-        .onDisappear {
-            dalleViewModel.cancel()
         }
     }
     
