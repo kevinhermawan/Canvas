@@ -38,6 +38,7 @@ struct AutosavePicker: View {
             
             HStack {
                 Text(location.path)
+                    .foregroundStyle(.secondary)
                     .if(disabled) { view in
                         view.foregroundStyle(.tertiary)
                     }
