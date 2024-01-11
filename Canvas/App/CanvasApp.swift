@@ -54,6 +54,9 @@ struct CanvasApp: App {
                     Link("Canvas Help", destination: url)
                 }
             }
+            
+            SidebarCommands()
+            InspectorCommands()
         }
         
         Settings {
