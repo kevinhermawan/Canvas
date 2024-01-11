@@ -3,20 +3,22 @@
     <channel>
         <title>Canvas</title>
         <item>
-            <title>1.0.2</title>
-            <pubDate>Thu, 04 Jan 2024 22:21:36 +0700</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+            <title>1.0.3</title>
+            <pubDate>Thu, 11 Jan 2024 16:49:27 +0700</pubDate>
+            <sparkle:version>4</sparkle:version>
+            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description>
             <![CDATA[
                 <ul>
-                    <li>feat: adds orientation label to size picker by @kevinhermawan</li>
-                    <li>fix: API Key can't be removed by @kevinhermawan</li>
+                    <li>feat: adds auto-save results by @kevinhermawan</li>
+                    <li>improve: use the menu name as a navigation title by @kevinhermawan</li>
+                    <li>refactor: moves API Key configuration to Settings by @kevinhermawan</li>
+                    <li>feat: adds sidebar and inspector commands by @kevinhermawan</li>
                 </ul>
             ]]>
             </description>
-            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.2/Canvas-1.0.2.dmg" length="3330510" type="application/octet-stream" sparkle:edSignature="VWjp6MHpYx3RpYpCEya+4xKgczFg9o4Me68+J5v8Puh4bj3Sbufinvz1YYKpOBQVx0WZh5d9DsZaOh0YqeyLCQ=="/>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.3/Canvas-1.0.3.dmg" length="3358754" type="application/octet-stream" sparkle:edSignature="Iojd9cFXuDgU3qZOnvTEdh2ZcnXRoNkR2J0ZeBYCBaIyhUMbZAYrTTGH8GqbI95XqmmmaOdNUM2uMOzS4iwSAA=="/>
         </item>
     </channel>
 </rss>
