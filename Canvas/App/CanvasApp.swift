@@ -7,6 +7,7 @@
 
 import AppInfo
 import CoreViewModels
+import KeychainAccess
 import SettingsModule
 import Sparkle
 import SwiftUI
@@ -17,15 +18,12 @@ struct CanvasApp: App {
     private var updater: SPUUpdater
 
     @State private var settingsManager: SettingsManager
-    
-    @State private var apiKeyViewModel: APIKeyViewModel
     @State private var dalleViewModel: DalleViewModel
     @State private var dalleModelInfoViewModel: DalleModelInfoViewModel
 
     init() {
-        self._settingsManager = State(initialValue: SettingsManager())
-        
-        self._apiKeyViewModel = State(initialValue: APIKeyViewModel())
+        let keychain = Keychain()
+        self._settingsManager = State(initialValue: SettingsManager(keychain: keychain))
         self._dalleViewModel = State(initialValue: DalleViewModel())
         self._dalleModelInfoViewModel = State(initialValue: DalleModelInfoViewModel())
         
@@ -40,7 +38,6 @@ struct CanvasApp: App {
         WindowGroup {
             AppView()
                 .environment(settingsManager)
-                .environment(apiKeyViewModel)
                 .environment(dalleViewModel)
                 .environment(dalleModelInfoViewModel)
         }

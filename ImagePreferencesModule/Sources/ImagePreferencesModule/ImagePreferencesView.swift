@@ -18,9 +18,7 @@ public struct ImagePreferencesView: View {
     private var isMaskPickerVisible: Bool = false
     private var imageFootnote: LocalizedStringKey = ""
     private var maskFootnote: LocalizedStringKey = ""
-    
-    @Environment(APIKeyViewModel.self) private var apiKeyViewModel
-    
+        
     @Binding private var modelSelection: DalleModel
     @Binding private var numberSelection: Int
     @Binding private var sizeSelection: String
@@ -29,7 +27,6 @@ public struct ImagePreferencesView: View {
     @Binding private var imageData: Data?
     @Binding private var maskData: Data?
     
-    @State private var setupAPIKeyPresented: Bool = false
     @State private var imageError: Error? = nil
     @State private var maskError: Error? = nil
     
@@ -53,14 +50,6 @@ public struct ImagePreferencesView: View {
     
     public var body: some View {
         Form {
-            @Bindable var apiKeyViewModelBindable = apiKeyViewModel
-            
-            APIKeyPicker(apiKey: $apiKeyViewModelBindable.apiKey) {
-                setupAPIKeyPresented = true
-            } removeAction: {
-                apiKeyViewModel.remove()
-            }
-            
             ModelPicker(selection: $modelSelection)
                 .hide(if: isModelPickerHidden, removeCompletely: true)
             
@@ -92,9 +81,6 @@ public struct ImagePreferencesView: View {
             sizeSelection = modelSelection.sizes[0]
             qualitySelection = modelSelection.qualities?.first
             styleSelection = modelSelection.styles?.first
-        }
-        .sheet(isPresented: $setupAPIKeyPresented) {
-            SetupAPIKeyView()
         }
     }
     
@@ -136,5 +122,4 @@ public struct ImagePreferencesView: View {
         imageData: .constant(nil),
         maskData: .constant(nil)
     )
-    .environment(APIKeyViewModel())
 }

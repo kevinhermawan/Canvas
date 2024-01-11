@@ -10,10 +10,11 @@ import CoreViewModels
 import CoreViews
 import Defaults
 import OpenAI
+import SettingsModule
 import SwiftUI
 
 public struct ImageEditView: View {
-    @Environment(APIKeyViewModel.self) private var apiKeyViewModel
+    @Environment(SettingsManager.self) private var settingsManager
     @Environment(DalleViewModel.self) private var dalleViewModel
     
     @State private var prompt: String = ""
@@ -72,7 +73,7 @@ public struct ImageEditView: View {
         
         let query = ImageEditsQuery(image: image, fileName: fileName, mask: mask, maskFileName: maskFileName, prompt: prompt, n: number, size: size)
         
-        dalleViewModel.setup(apiKey: apiKeyViewModel.apiKey)
+        dalleViewModel.setup(apiKey: settingsManager.apiKey)
         dalleViewModel.imageEdit(query: query)
     }
 }

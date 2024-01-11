@@ -16,6 +16,14 @@ struct GeneralView: View {
         
         VStack(alignment: .leading, spacing: 16) {
             GroupBox {
+                APIKeyPicker(
+                    apiKeyMasked: manager.apiKeyMasked,
+                    onSetup: { manager.setupAPIKey(apiKey: $0) },
+                    onRemove: { manager.removeAPIKey() }
+                )
+            }
+            
+            GroupBox {
                 AutosavePicker(
                     enabled: $manager.autosaveEnabled,
                     location: $manager.autosaveLocation,

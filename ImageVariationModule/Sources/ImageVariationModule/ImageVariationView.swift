@@ -9,12 +9,13 @@ import CoreModels
 import CoreViewModels
 import CoreViews
 import OpenAI
+import SettingsModule
 import SwiftUI
 import ViewCondition
 import ViewState
 
 public struct ImageVariationView: View {
-    @Environment(APIKeyViewModel.self) private var apiKeyViewModel
+    @Environment(SettingsManager.self) private var settingsManager
     @Environment(DalleViewModel.self) private var dalleViewModel
     
     private var number: Int
@@ -84,7 +85,7 @@ public struct ImageVariationView: View {
         
         let query = ImageVariationsQuery(image: image, fileName: fileName, n: number, size: size)
         
-        dalleViewModel.setup(apiKey: apiKeyViewModel.apiKey)
+        dalleViewModel.setup(apiKey: settingsManager.apiKey)
         dalleViewModel.imageVariation(query: query)
     }
 }
