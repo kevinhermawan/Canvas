@@ -9,10 +9,11 @@ import CoreModels
 import CoreViewModels
 import CoreViews
 import OpenAI
+import SettingsModule
 import SwiftUI
 
 public struct ImageGenerationView: View {
-    @Environment(APIKeyViewModel.self) private var apiKeyViewModel
+    @Environment(SettingsManager.self) private var settingsManager
     @Environment(DalleViewModel.self) private var dalleViewModel
     
     @FocusState private var promptFocused: Bool
@@ -72,7 +73,7 @@ public struct ImageGenerationView: View {
         let quality = quality?.rawValue
         let query = ImagesQuery(prompt: prompt, model: model, n: number, size: size, style: style, quality: quality)
         
-        dalleViewModel.setup(apiKey: apiKeyViewModel.apiKey)
+        dalleViewModel.setup(apiKey: settingsManager.apiKey)
         dalleViewModel.imageGeneration(query: query)
     }
 }

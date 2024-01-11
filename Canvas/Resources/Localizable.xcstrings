@@ -7,28 +7,6 @@
     "Check for Updates..." : {
 
     },
-    "FOOTNOTE_API_KEY" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The API key is securely stored in the keychain."
-          }
-        }
-      }
-    },
-    "FOOTNOTE_API_KEY_SETUP" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please setup the API key."
-          }
-        }
-      }
-    },
     "FOOTNOTE_IMAGE_IMAGE_EDIT" : {
       "extractionState" : "manual",
       "localizations" : {
