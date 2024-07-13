@@ -6,6 +6,7 @@
 //
 
 import CoreExtensions
+import CoreModels
 import CoreViewModels
 import CoreViews
 import Defaults
@@ -20,13 +21,13 @@ public struct ImageEditView: View {
     @State private var prompt: String = ""
     
     private var number: Int
-    private var size: String
+    private var size: DalleModel.Size?
     private var imageData: Data?
     private var maskData: Data?
     
     public init(
         number: Int,
-        size: String,
+        size: DalleModel.Size? = nil,
         imageData: Data? = nil,
         maskData: Data? = nil
     ) {
@@ -66,12 +67,9 @@ public struct ImageEditView: View {
     @MainActor
     func generationAction() {
         guard let image = imageData else { return }
-        let fileName = UUID().uuidString
-        
-        let mask = maskData
-        let maskFileName: String? = mask.isNotNil ? UUID().uuidString : nil
-        
-        let query = ImageEditsQuery(image: image, fileName: fileName, mask: mask, maskFileName: maskFileName, prompt: prompt, n: number, size: size)
+        guard let mask = maskData else { return }
+        let size = size?.imagesQuery
+        let query = ImageEditsQuery(image: image, prompt: prompt, mask: mask, size: size)
         
         dalleViewModel.setup(apiKey: settingsManager.apiKey)
         dalleViewModel.imageEdit(query: query)

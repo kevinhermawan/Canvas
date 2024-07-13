@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sindresorhus/Defaults.git",
       "state" : {
-        "revision" : "3efef5a28ebdbbe922d4a2049493733ed14475a6",
-        "version" : "7.3.1"
+        "revision" : "38925e3cfacf3fb89a81a35b1cd44fd5a5b7e0fa",
+        "version" : "8.2.0"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke.git",
       "state" : {
-        "revision" : "1694798e876113d44f6ec6ead965d7286695981d",
-        "version" : "12.2.0"
+        "revision" : "0ead44350d2737db384908569c012fe67c421e4d",
+        "version" : "12.8.0"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MacPaw/OpenAI.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "497266a278de1f32a609981e0012faabcf2091b4"
+        "revision" : "fd13a41e987004d14f1793c570721953a2767b03",
+        "version" : "0.2.9"
       }
     },
     {
@@ -86,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kevinhermawan/ViewState.git",
       "state" : {
-        "revision" : "8e5a5efbbf3fb5a2d2621533a115a9da031214cb",
-        "version" : "1.2.1"
+        "revision" : "6c85c207c23edf487007542651e3533a80dfa0bc",
+        "version" : "1.2.2"
       }
     }
   ],

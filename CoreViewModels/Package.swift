@@ -15,8 +15,8 @@ let package = Package(
         .package(name: "CoreModels", path: "../CoreModels"),
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", .upToNextMajor(from: "4.2.2")),
         .package(url: "https://github.com/kevinhermawan/AppInfo.git", .upToNextMajor(from: "1.0.2")),
-        .package(url: "https://github.com/kevinhermawan/ViewState.git", .upToNextMajor(from: "1.2.1")),
-        .package(url: "https://github.com/MacPaw/OpenAI.git", branch: "main")
+        .package(url: "https://github.com/kevinhermawan/ViewState.git", .upToNextMajor(from: "1.2.2")),
+        .package(url: "https://github.com/MacPaw/OpenAI.git", .upToNextMajor(from: "0.2.9"))
     ],
     targets: [
         .target(

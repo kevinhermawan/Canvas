@@ -12,7 +12,7 @@ let package = Package(
             targets: ["CoreModels"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/sindresorhus/Defaults.git", .upToNextMajor(from: "7.3.1"))
+        .package(url: "https://github.com/sindresorhus/Defaults.git", .upToNextMajor(from: "8.2.0"))
     ],
     targets: [
         .target(

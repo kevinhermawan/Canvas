@@ -7,6 +7,7 @@
 
 import Defaults
 import Foundation
+import OpenAI
 
 public enum DalleModel: String, CaseIterable {
     case dalle2 = "dall-e-2"
@@ -29,15 +30,6 @@ public enum DalleModel: String, CaseIterable {
             return Array(arrayLiteral: 1)
         }
     }
-    
-    public var sizes: [String] {
-        switch self {
-        case .dalle2:
-            return ["256x256", "512x512", "1024x1024"]
-        case .dalle3:
-            return ["1024x1024", "1024x1792", "1792x1024"]
-        }
-    }
 }
 
 extension DalleModel: Identifiable {
@@ -49,9 +41,57 @@ extension DalleModel: Identifiable {
 extension DalleModel: Codable, Defaults.Serializable {}
 
 extension DalleModel {
+    public enum Size: String, CaseIterable, Identifiable, Codable, Defaults.Serializable {
+        case _256, _512, _1024, _1024_1792, _1792_1024
+        
+        public var id: String {
+            self.rawValue
+        }
+        
+        public var title: String {
+            switch self {
+            case ._256:
+                return "256x256 (Square)"
+            case ._512:
+                return "512x512 (Square)"
+            case ._1024:
+                return "1024x1024 (Square)"
+            case ._1024_1792:
+                return "1024x1792 (Landscape)"
+            case ._1792_1024:
+                return "1792x1024 (Portrait)"
+            }
+        }
+        
+        public var imagesQuery: ImagesQuery.Size {
+            switch self {
+            case ._256:
+                return ._256
+            case ._512:
+                return ._512
+            case ._1024:
+                return ._1024
+            case ._1024_1792:
+                return ._1024_1792
+            case ._1792_1024:
+                return ._1792_1024
+            }
+        }
+    }
+    
+    public var sizes: [Size] {
+        switch self {
+        case .dalle2:
+            return [._256, ._512, ._1024]
+        case .dalle3:
+            return [._1024, ._1024_1792, ._1792_1024]
+        }
+    }
+}
+
+extension DalleModel {
     public enum Quality: String, CaseIterable, Identifiable, Codable, Defaults.Serializable {
-        case standard
-        case hd
+        case standard, hd
         
         public var id: String {
             self.rawValue
@@ -63,6 +103,15 @@ extension DalleModel {
                 return "Standard"
             case .hd:
                 return "HD"
+            }
+        }
+        
+        public var imagesQuery: ImagesQuery.Quality {
+            switch self {
+            case .standard:
+                return .standard
+            case .hd:
+                return .hd
             }
         }
     }
@@ -79,8 +128,7 @@ extension DalleModel {
 
 extension DalleModel {
     public enum Style: String, CaseIterable, Identifiable, Defaults.Serializable {
-        case vivid
-        case natural
+        case vivid, natural
         
         public var id: String {
             self.rawValue
@@ -92,6 +140,15 @@ extension DalleModel {
                 return "Vivid"
             case .natural:
                 return "Natural"
+            }
+        }
+        
+        public var imagesQuery: ImagesQuery.Style {
+            switch self {
+            case .vivid:
+                return .vivid
+            case .natural:
+                return .natural
             }
         }
     }

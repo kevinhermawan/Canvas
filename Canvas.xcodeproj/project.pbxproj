@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A03693D2B4D6FBB00D7DAD4 /* SettingsModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0A03693C2B4D6FBB00D7DAD4 /* SettingsModule */; };
 		0A20744D2B3CD3E5008516D1 /* ModelPricingModule in Frameworks */ = {isa = PBXBuildFile; productRef = 0A20744C2B3CD3E5008516D1 /* ModelPricingModule */; };
+		0A211A2A2C42D1C900B9029F /* AppInfo in Frameworks */ = {isa = PBXBuildFile; productRef = 0A211A292C42D1C900B9029F /* AppInfo */; };
 		0A809A402B39752200C9A015 /* CanvasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A809A3F2B39752200C9A015 /* CanvasApp.swift */; };
 		0A809A462B39752300C9A015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A809A452B39752300C9A015 /* Assets.xcassets */; };
 		0A809A492B39752300C9A015 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A809A482B39752300C9A015 /* Preview Assets.xcassets */; };
@@ -26,7 +27,6 @@
 		0A809A7C2B39988000C9A015 /* Defaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A809A7B2B39988000C9A015 /* Defaults+Keys.swift */; };
 		0A809A7F2B39DDB100C9A015 /* CoreExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 0A809A7E2B39DDB100C9A015 /* CoreExtensions */; };
 		0A809A812B39DDBA00C9A015 /* CoreModels in Frameworks */ = {isa = PBXBuildFile; productRef = 0A809A802B39DDBA00C9A015 /* CoreModels */; };
-		0A809A842B39EB0100C9A015 /* AppInfo in Frameworks */ = {isa = PBXBuildFile; productRef = 0A809A832B39EB0100C9A015 /* AppInfo */; };
 		0AE400612B3A98E600307732 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0AE400602B3A98E600307732 /* Localizable.xcstrings */; };
 		0AE400642B3AD5F800307732 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 0AE400632B3AD5F800307732 /* Sparkle */; };
 		0AE400662B3AD84700307732 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE400652B3AD84700307732 /* AppUpdater.swift */; };
@@ -63,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A809A842B39EB0100C9A015 /* AppInfo in Frameworks */,
 				0A20744D2B3CD3E5008516D1 /* ModelPricingModule in Frameworks */,
 				0A809A632B397C3B00C9A015 /* ImageEditModule in Frameworks */,
 				0A809A612B397C3B00C9A015 /* CoreViews in Frameworks */,
@@ -76,6 +75,7 @@
 				0A809A812B39DDBA00C9A015 /* CoreModels in Frameworks */,
 				0A809A792B39986D00C9A015 /* Defaults in Frameworks */,
 				0A809A7F2B39DDB100C9A015 /* CoreExtensions in Frameworks */,
+				0A211A2A2C42D1C900B9029F /* AppInfo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,10 +209,10 @@
 				0A809A782B39986D00C9A015 /* Defaults */,
 				0A809A7E2B39DDB100C9A015 /* CoreExtensions */,
 				0A809A802B39DDBA00C9A015 /* CoreModels */,
-				0A809A832B39EB0100C9A015 /* AppInfo */,
 				0AE400632B3AD5F800307732 /* Sparkle */,
 				0A20744C2B3CD3E5008516D1 /* ModelPricingModule */,
 				0A03693C2B4D6FBB00D7DAD4 /* SettingsModule */,
+				0A211A292C42D1C900B9029F /* AppInfo */,
 			);
 			productName = Canvas;
 			productReference = 0A809A3C2B39752200C9A015 /* Canvas.app */;
@@ -244,8 +244,8 @@
 			mainGroup = 0A809A332B39752200C9A015;
 			packageReferences = (
 				0A809A772B39986D00C9A015 /* XCRemoteSwiftPackageReference "Defaults" */,
-				0A809A822B39EB0100C9A015 /* XCRemoteSwiftPackageReference "AppInfo" */,
 				0AE400622B3AD5F800307732 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				0A211A282C42D1C900B9029F /* XCRemoteSwiftPackageReference "AppInfo" */,
 			);
 			productRefGroup = 0A809A3D2B39752200C9A015 /* Products */;
 			projectDirPath = "";
@@ -495,20 +495,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0A211A282C42D1C900B9029F /* XCRemoteSwiftPackageReference "AppInfo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kevinhermawan/AppInfo.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 		0A809A772B39986D00C9A015 /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Defaults.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.3.1;
-			};
-		};
-		0A809A822B39EB0100C9A015 /* XCRemoteSwiftPackageReference "AppInfo" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kevinhermawan/AppInfo";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.2;
+				minimumVersion = 8.2.0;
 			};
 		};
 		0AE400622B3AD5F800307732 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
@@ -516,7 +516,7 @@
 			repositoryURL = "https://github.com/sparkle-project/Sparkle.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.2;
+				minimumVersion = 2.6.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -529,6 +529,11 @@
 		0A20744C2B3CD3E5008516D1 /* ModelPricingModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ModelPricingModule;
+		};
+		0A211A292C42D1C900B9029F /* AppInfo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A211A282C42D1C900B9029F /* XCRemoteSwiftPackageReference "AppInfo" */;
+			productName = AppInfo;
 		};
 		0A809A5A2B397B6100C9A015 /* CoreViewModels */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -566,11 +571,6 @@
 		0A809A802B39DDBA00C9A015 /* CoreModels */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreModels;
-		};
-		0A809A832B39EB0100C9A015 /* AppInfo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A809A822B39EB0100C9A015 /* XCRemoteSwiftPackageReference "AppInfo" */;
-			productName = AppInfo;
 		};
 		0AE400632B3AD5F800307732 /* Sparkle */ = {
 			isa = XCSwiftPackageProductDependency;

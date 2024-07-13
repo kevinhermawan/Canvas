@@ -6,6 +6,7 @@
 //
 
 import CoreModels
+import CoreModels
 import CoreViewModels
 import CoreViews
 import OpenAI
@@ -19,12 +20,12 @@ public struct ImageVariationView: View {
     @Environment(DalleViewModel.self) private var dalleViewModel
     
     private var number: Int
-    private var size: String
+    private var size: DalleModel.Size?
     private var imageData: Data?
     
     public init(
         number: Int,
-        size: String,
+        size: DalleModel.Size? = nil,
         imageData: Data? = nil
     ) {
         self.number = number
@@ -80,10 +81,9 @@ public struct ImageVariationView: View {
     
     @MainActor
     func generationAction() {
-        let fileName = UUID().uuidString
         guard let image = imageData else { return }
-        
-        let query = ImageVariationsQuery(image: image, fileName: fileName, n: number, size: size)
+        let size = size?.rawValue
+        let query = ImageVariationsQuery(image: image, n: number, size: size)
         
         dalleViewModel.setup(apiKey: settingsManager.apiKey)
         dalleViewModel.imageVariation(query: query)

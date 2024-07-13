@@ -21,14 +21,14 @@ public struct ImageGenerationView: View {
     
     private var model: DalleModel
     private var number: Int
-    private var size: String
+    private var size: DalleModel.Size
     private var quality: DalleModel.Quality?
     private var style: DalleModel.Style?
     
     public init(
         model: DalleModel,
         number: Int,
-        size: String,
+        size: DalleModel.Size,
         quality: DalleModel.Quality? = nil,
         style: DalleModel.Style? = nil
     ) {
@@ -69,9 +69,10 @@ public struct ImageGenerationView: View {
     @MainActor
     func generationAction() {
         let model = model.rawValue
-        let style = style?.rawValue
-        let quality = quality?.rawValue
-        let query = ImagesQuery(prompt: prompt, model: model, n: number, size: size, style: style, quality: quality)
+        let size = size.imagesQuery
+        let quality = quality?.imagesQuery
+        let style = style?.imagesQuery
+        let query = ImagesQuery(prompt: prompt, model: model, n: number, quality: quality, size: size, style: style)
         
         dalleViewModel.setup(apiKey: settingsManager.apiKey)
         dalleViewModel.imageGeneration(query: query)
