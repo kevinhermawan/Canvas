@@ -12,7 +12,7 @@ let package = Package(
             targets: ["CoreViews"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "12.2.0")),
+        .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "12.8.0")),
         .package(url: "https://github.com/kevinhermawan/ChatField.git", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [

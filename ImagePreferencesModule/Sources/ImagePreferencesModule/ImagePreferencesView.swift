@@ -18,10 +18,10 @@ public struct ImagePreferencesView: View {
     private var isMaskPickerVisible: Bool = false
     private var imageFootnote: LocalizedStringKey = ""
     private var maskFootnote: LocalizedStringKey = ""
-        
+    
     @Binding private var modelSelection: DalleModel
     @Binding private var numberSelection: Int
-    @Binding private var sizeSelection: String
+    @Binding private var sizeSelection: DalleModel.Size
     @Binding private var qualitySelection: DalleModel.Quality?
     @Binding private var styleSelection: DalleModel.Style?
     @Binding private var imageData: Data?
@@ -33,7 +33,7 @@ public struct ImagePreferencesView: View {
     public init(
         modelSelection: Binding<DalleModel>,
         numberSelection: Binding<Int>,
-        sizeSelection: Binding<String>,
+        sizeSelection: Binding<DalleModel.Size>,
         qualitySelection: Binding<DalleModel.Quality?>,
         styleSelection: Binding<DalleModel.Style?>,
         imageData: Binding<Data?>,
@@ -66,7 +66,7 @@ public struct ImagePreferencesView: View {
             
             SizePicker(modelSelection.sizes, selection: $sizeSelection)
                 .visible(if: modelSelection.sizes.contains(sizeSelection), removeCompletely: true)
-            
+
             if let qualities = modelSelection.qualities, let selection = Binding($qualitySelection) {
                 QualityPicker(qualities, selection: selection)
             }
@@ -79,8 +79,8 @@ public struct ImagePreferencesView: View {
         .onChange(of: modelSelection) {
             numberSelection = modelSelection.numbers[0]
             sizeSelection = modelSelection.sizes[0]
-            qualitySelection = modelSelection.qualities?.first
-            styleSelection = modelSelection.styles?.first
+            qualitySelection = modelSelection.qualities?.first ?? .standard
+            styleSelection = modelSelection.styles?.first ?? .vivid
         }
     }
     
@@ -106,20 +106,4 @@ public struct ImagePreferencesView: View {
         
         return view
     }
-}
-
-#Preview {
-    @State var selectedModel: DalleModel = .dalle2
-    @State var selectedNumber: Int = DalleModel.dalle2.numbers[0]
-    @State var selectedSize: String = DalleModel.dalle2.sizes[0]
-    
-    return ImagePreferencesView(
-        modelSelection: $selectedModel,
-        numberSelection: $selectedNumber,
-        sizeSelection: $selectedSize,
-        qualitySelection: .constant(nil),
-        styleSelection: .constant(nil),
-        imageData: .constant(nil),
-        maskData: .constant(nil)
-    )
 }

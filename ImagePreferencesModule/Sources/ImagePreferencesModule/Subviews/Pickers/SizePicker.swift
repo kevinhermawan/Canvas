@@ -5,14 +5,15 @@
 //  Created by Kevin Hermawan on 26/12/23.
 //
 
+import CoreModels
 import CoreViews
 import SwiftUI
 
 struct SizePicker: View {
-    private let sizes: [String]
-    @Binding private var selection: String
+    private let sizes: [DalleModel.Size]
+    @Binding private var selection: DalleModel.Size
     
-    init(_ sizes: [String], selection: Binding<String>) {
+    init(_ sizes: [DalleModel.Size], selection: Binding<DalleModel.Size>) {
         self.sizes = sizes
         self._selection = selection
     }
@@ -21,27 +22,13 @@ struct SizePicker: View {
         Section {
             Picker("Select size", selection: $selection) {
                 ForEach(sizes, id: \.self) { size in
-                    Text(getLabel(for: size)).tag(size)
+                    Text(size.title).tag(size)
                 }
             }
         } header: {
             Text("Size")
         } footer: {
             FootnoteText("FOOTNOTE_SIZE")
-        }
-    }
-    
-    private func getLabel(for size: String) -> String {
-        let dimensions = size.split(separator: "x").compactMap { Int($0) }
-        let width = dimensions[0]
-        let height = dimensions[1]
-        
-        if width == height {
-            return "\(size) (Square)"
-        } else if height > width {
-            return "\(size) (Portrait)"
-        } else {
-            return "\(size) (Landscape)"
         }
     }
 }
