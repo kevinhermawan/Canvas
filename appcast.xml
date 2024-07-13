@@ -3,23 +3,26 @@
     <channel>
         <title>Canvas</title>
         <item>
-            <title>1.0.3</title>
-            <pubDate>Thu, 11 Jan 2024 16:49:27 +0700</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+            <title>1.0.4</title>
+            <pubDate>Sun, 14 Jul 2024 00:02:21 +0700</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description>
             <![CDATA[
+                <h1>Canvas v1.0.4</h1>
+                <h3>What's New</h3>
                 <ul>
-                    <li>feat: adds auto-save results by @kevinhermawan</li>
-                    <li>improve: use the menu name as a navigation title by @kevinhermawan</li>
-                    <li>refactor: moves API Key configuration to Settings by @kevinhermawan</li>
-                    <li>improve: footnote text color by @kevinhermawan</li>
-                    <li>feat: adds sidebar and inspector commands by @kevinhermawan</li>
+                    <li><strong>New App Icon</strong>: Enjoy our fresh, new look with the updated app icon.</li>
                 </ul>
+                <h3>Miscellaneous</h3>
+                <ul>
+                    <li>Bug fixes and performance improvements.</li>
+                </ul>
+                <p>For a complete list of changes, visit our <a href="https://github.com/kevinhermawan/Canvas/releases/tag/v1.0.4">Full Changelog</a>.</p>
             ]]>
             </description>
-            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.3/Canvas-1.0.3.dmg" length="3358754" type="application/octet-stream" sparkle:edSignature="Iojd9cFXuDgU3qZOnvTEdh2ZcnXRoNkR2J0ZeBYCBaIyhUMbZAYrTTGH8GqbI95XqmmmaOdNUM2uMOzS4iwSAA=="/>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.4/Canvas-1.0.4.dmg" length="5965424" type="application/octet-stream" sparkle:edSignature="lKCnQOp2KSm9Cput7u5L4lvZlxxBFutQJyrf+GXA1yFsAYaqNkbC9TjdelUCLwxNbaPNVF59cl5kG4NcyP+UAQ=="/>
         </item>
     </channel>
 </rss>
