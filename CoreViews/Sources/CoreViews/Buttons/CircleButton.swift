@@ -21,16 +21,11 @@ public struct CircleButton: View {
             Image(systemName: systemImage)
                 .foregroundStyle(.foreground)
                 .fontWeight(.bold)
-                .padding(6)
+                .padding(8)
         }
         .background(.background)
         .buttonStyle(.borderless)
         .clipShape(.circle)
         .colorInvert()
     }
-}
-
-#Preview {
-    CircleButton(systemImage: "arrow.up", action: {})
-        .padding()
 }

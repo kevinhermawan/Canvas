@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "12.8.0")),
-        .package(url: "https://github.com/kevinhermawan/ChatField.git", .upToNextMajor(from: "1.0.0"))
+        .package(url: "https://github.com/kevinhermawan/ChatField.git", .upToNextMajor(from: "3.0.3"))
     ],
     targets: [
         .target(
@@ -22,9 +22,6 @@ let package = Package(
                 .product(name: "Nuke", package: "Nuke"),
                 .product(name: "NukeUI", package: "Nuke"),
                 "ChatField"
-            ]),
-        .testTarget(
-            name: "CoreViewsTests",
-            dependencies: ["CoreViews"]),
+            ])
     ]
 )
