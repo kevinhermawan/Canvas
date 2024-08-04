@@ -15,10 +15,13 @@ public struct FootnoteText: View {
     }
     
     public var body: some View {
-        Text(titleKey)
-            .foregroundStyle(.secondary)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .font(.callout)
+        VStack {
+            Text(titleKey)
+                .multilineTextAlignment(.leading)
+                .foregroundStyle(.secondary)
+                .font(.callout)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

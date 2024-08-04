@@ -14,7 +14,7 @@ struct ModelPicker: View {
     
     var body: some View {
         Section {
-            Picker("Select model", selection: $selection) {
+            Picker("Selected model", selection: $selection) {
                 ForEach(DalleModel.allCases) { model in
                     Text(model.title).tag(model)
                 }

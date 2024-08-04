@@ -20,7 +20,7 @@ struct StylePicker: View {
     
     var body: some View {
         Section {
-            Picker("Select style", selection: $selection) {
+            Picker("Selected style", selection: $selection) {
                 ForEach(styles) { style in
                     Text(style.title).tag(style)
                 }

@@ -20,7 +20,7 @@ struct SizePicker: View {
     
     var body: some View {
         Section {
-            Picker("Select size", selection: $selection) {
+            Picker("Selected size", selection: $selection) {
                 ForEach(sizes, id: \.self) { size in
                     Text(size.title).tag(size)
                 }

@@ -20,7 +20,7 @@ struct QualityPicker: View {
     
     var body: some View {
         Section {
-            Picker("Select quality", selection: $selection) {
+            Picker("Selected quality", selection: $selection) {
                 ForEach(qualities) { quality in
                     Text(quality.title).tag(quality)
                 }
