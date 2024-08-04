@@ -75,7 +75,7 @@ public struct ImagePreferencesView: View {
                 StylePicker(styles, selection: selection)
             }
         }
-        .inspectorColumnWidth(min: 312, ideal: 312)
+        .inspectorColumnWidth(min: 320, ideal: 320)
         .onChange(of: modelSelection) {
             numberSelection = modelSelection.numbers[0]
             sizeSelection = modelSelection.sizes[0]

@@ -36,7 +36,7 @@ struct AppView: View {
     var body: some View {
         NavigationSplitView {
             AppSidebarView(selection: $selectedSidebar)
-                .navigationSplitViewColumnWidth(min: 224, ideal: 224)
+                .navigationSplitViewColumnWidth(min: 256, ideal: 256)
         } detail: {
             switch selectedSidebar {
             case .imageGeneration:

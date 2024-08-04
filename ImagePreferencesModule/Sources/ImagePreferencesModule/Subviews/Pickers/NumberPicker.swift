@@ -19,7 +19,7 @@ struct NumberPicker: View {
     
     var body: some View {
         Section {
-            Picker("Select number", selection: $selection) {
+            Picker("Selected number", selection: $selection) {
                 ForEach(numbers, id: \.self) { number in
                     Text(String(number)).tag(number)
                 }
