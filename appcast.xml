@@ -3,26 +3,21 @@
     <channel>
         <title>Canvas</title>
         <item>
-            <title>1.0.4</title>
-            <pubDate>Sun, 14 Jul 2024 00:02:21 +0700</pubDate>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+            <title>1.0.5</title>
+            <pubDate>Mon, 05 Aug 2024 05:27:54 +0700</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description>
             <![CDATA[
-                <h1>Canvas v1.0.4</h1>
-                <h3>What's New</h3>
-                <ul>
-                    <li><strong>New App Icon</strong>: Enjoy our fresh, new look with the updated app icon.</li>
-                </ul>
-                <h3>Miscellaneous</h3>
+                <h1>Canvas v1.0.5</h1>
                 <ul>
                     <li>Bug fixes and performance improvements.</li>
                 </ul>
-                <p>For a complete list of changes, visit our <a href="https://github.com/kevinhermawan/Canvas/releases/tag/v1.0.4">Full Changelog</a>.</p>
+                <p>For a complete list of changes, visit our <a href="https://github.com/kevinhermawan/Canvas/releases/tag/v1.0.5">Full Changelog</a>.</p>
             ]]>
             </description>
-            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.4/Canvas-1.0.4.dmg" length="5965424" type="application/octet-stream" sparkle:edSignature="lKCnQOp2KSm9Cput7u5L4lvZlxxBFutQJyrf+GXA1yFsAYaqNkbC9TjdelUCLwxNbaPNVF59cl5kG4NcyP+UAQ=="/>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.5/Canvas-1.0.5.dmg" length="5984830" type="application/octet-stream" sparkle:edSignature="JyM1e6STtxPYDBL6piwZZu0foHfI5kSOxbC6lQoOzATRWQ1DjnEBovRvk7qzKQSUqKHObMBk+2PMSPT9SYEhBQ=="/>
         </item>
     </channel>
 </rss>
