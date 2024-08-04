@@ -32,23 +32,21 @@ public struct PromptField: View {
     }
     
     public var body: some View {
-        VStack(spacing: 8) {
-            HStack(alignment: .bottom) {
-                ChatField("Prompt", text: $prompt, action: generationAction)
-                    .textFieldStyle(CapsuleChatFieldStyle())
-                    .disabled(generating)
-                
-                if generating {
-                    CircleButton(systemImage: "stop.fill", action: cancellationAction)
-                        .keyboardShortcut("c", modifiers: .control)
-                        .help("Cancel generation")
-                } else {
-                    CircleButton(systemImage: "arrow.up", action: generationAction)
-                        .help("Generate image")
-                }
+        ChatField("Prompt", text: $prompt) {
+            generationAction()
+        } trailingAccessory: {
+            if generating {
+                CircleButton(systemImage: "stop.fill", action: cancellationAction)
+                    .keyboardShortcut("c", modifiers: .control)
+                    .help("Cancel generation")
+            } else {
+                CircleButton(systemImage: "arrow.up", action: generationAction)
+                    .help("Generate image")
             }
-            
+        } footer: {
             PromptFieldFooterText(viewState: viewState)
         }
+        .chatFieldDisabled(generating)
+        .chatFieldStyle(.capsule)
     }
 }

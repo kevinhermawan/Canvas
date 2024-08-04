@@ -19,13 +19,6 @@ let package = Package(
     targets: [
         .target(
             name: "ImageGenerationModule",
-            dependencies: [
-                "CoreModels",
-                "CoreViewModels",
-                "CoreViews"
-            ]),
-        .testTarget(
-            name: "ImageGenerationModuleTests",
-            dependencies: ["ImageGenerationModule"]),
+            dependencies: ["CoreModels", "CoreViewModels", "CoreViews"])
     ]
 )

@@ -18,9 +18,6 @@ let package = Package(
     targets: [
         .target(
             name: "SettingsModule",
-            dependencies: ["CoreExtensions", "Defaults"]),
-        .testTarget(
-            name: "SettingsModuleTests",
-            dependencies: ["SettingsModule"]),
+            dependencies: ["CoreExtensions", "Defaults"])
     ]
 )

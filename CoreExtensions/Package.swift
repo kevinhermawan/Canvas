@@ -12,10 +12,6 @@ let package = Package(
             targets: ["CoreExtensions"]),
     ],
     targets: [
-        .target(
-            name: "CoreExtensions"),
-        .testTarget(
-            name: "CoreExtensionsTests",
-            dependencies: ["CoreExtensions"]),
+        .target(name: "CoreExtensions")
     ]
 )

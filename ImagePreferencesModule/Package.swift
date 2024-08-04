@@ -21,15 +21,6 @@ let package = Package(
     targets: [
         .target(
             name: "ImagePreferencesModule",
-            dependencies: [
-                "CoreExtensions",
-                "CoreModels",
-                "CoreViewModels",
-                "CoreViews",
-                "ViewCondition"
-            ]),
-        .testTarget(
-            name: "ImagePreferencesModuleTests",
-            dependencies: ["ImagePreferencesModule"]),
+            dependencies: ["CoreExtensions", "CoreModels", "CoreViewModels", "CoreViews", "ViewCondition"])
     ]
 )
