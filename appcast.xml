@@ -3,21 +3,22 @@
     <channel>
         <title>Canvas</title>
         <item>
-            <title>1.0.5</title>
-            <pubDate>Mon, 05 Aug 2024 05:27:54 +0700</pubDate>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+            <title>1.0.6</title>
+            <pubDate>Mon, 05 Aug 2024 17:32:28 +0700</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description>
             <![CDATA[
-                <h1>Canvas v1.0.5</h1>
+                <h1>Canvas v1.0.6</h1>
+                <h3>Bug Fixes</h3>
                 <ul>
-                    <li>Bug fixes and performance improvements.</li>
+                    <li>Fixed: wrong orientation labels</li>
                 </ul>
-                <p>For a complete list of changes, visit our <a href="https://github.com/kevinhermawan/Canvas/releases/tag/v1.0.5">Full Changelog</a>.</p>
+                <p>For a complete list of changes, visit our <a href="https://github.com/kevinhermawan/Canvas/releases/tag/v1.0.6">Full Changelog</a>.</p>
             ]]>
             </description>
-            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.5/Canvas-1.0.5.dmg" length="5984830" type="application/octet-stream" sparkle:edSignature="JyM1e6STtxPYDBL6piwZZu0foHfI5kSOxbC6lQoOzATRWQ1DjnEBovRvk7qzKQSUqKHObMBk+2PMSPT9SYEhBQ=="/>
+            <enclosure url="https://github.com/kevinhermawan/Canvas/releases/download/v1.0.6/Canvas-1.0.5.dmg" length="5984710" type="application/octet-stream" sparkle:edSignature="4iFAQAUrR3l7JhYyOZli5AT/yiSZGfom0VqVc55HER/8A396D/7klANoLhC37ixePX9U+MDBM7B4aoT7KmjpDw=="/>
         </item>
     </channel>
 </rss>
