@@ -57,9 +57,9 @@ extension DalleModel {
             case ._1024:
                 return "1024x1024 (Square)"
             case ._1024_1792:
-                return "1024x1792 (Landscape)"
+                return "1024x1792 (Portrait)"
             case ._1792_1024:
-                return "1792x1024 (Portrait)"
+                return "1792x1024 (Landscape)"
             }
         }
         
